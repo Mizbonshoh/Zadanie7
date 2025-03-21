@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>🛸 Сайт-резюме </h1>
+            <div class="info">
+                <p><strong>ID:</strong> {{ data.get("id") }}</p>
+                <p><strong>Имя:</strong> {{ data.get("name") }}</p>
+                <p><strong>Username:</strong> {{ data.get("username") }}</p>
+                <p><strong>Email:</strong> <a href="mailto:{{ data.get('email') }}">{{ data.get("email") }}</a></p>
+                <p><strong>Ссылка:</strong> <a href="{{ data.get('web_url') }}" target="_blank">{{ data.get("web_url") }}</a></p>
+                <p><strong>Создан:</strong> {{ data.get("created_at") }}</p>
+                <p><strong>Текущие роли:</strong> {{ "Студент" }}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
